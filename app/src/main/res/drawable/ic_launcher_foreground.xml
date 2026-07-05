@@ -6,7 +6,6 @@
     android:viewportHeight="108">
     <!-- Download arrow -->
     <path
-        android:fillColor="#FFFFFF"
         android:pathData="M54,30 L54,65 M38,55 L54,71 L70,55"
         android:strokeWidth="4"
         android:strokeColor="#FFFFFF"
