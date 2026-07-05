@@ -1,16 +1,21 @@
 package ru.futurobot.glidedownloadinterceptor
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.futurobot.glidedownloadinterceptor.databinding.ActivityMainBinding
+import ru.futurobot.glidedownloadinterceptor.ext.observeProgress
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
@@ -28,10 +33,6 @@ class MainActivity : AppCompatActivity() {
         binding.loadIntoViewButton.setOnClickListener { loadIntoView() }
     }
 
-    /**
-     * Downloads the image to Glide's disk cache and reports progress.
-     * The image is not displayed — only progress is shown.
-     */
     private fun startDownload() {
         setUiState(UiState.Loading)
 
@@ -68,14 +69,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Downloads the image and displays it in the [ImageView].
-     * Progress is reported during the download phase.
-     */
     private fun loadIntoView() {
         setUiState(UiState.Loading)
 
-        // Use lifecycle-aware listener — auto-removed on destroy
         progressManager.observeProgress(lifecycle) { bytesRead, contentLength, _ ->
             updateProgress(bytesRead, contentLength)
         }
@@ -83,11 +79,11 @@ class MainActivity : AppCompatActivity() {
         Glide.with(this)
             .load(TEST_IMAGE_URL)
             .diskCacheStrategy(DiskCacheStrategy.DATA)
-            .listener(object : com.bumptech.glide.request.RequestListener<android.graphics.drawable.Drawable> {
+            .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(
-                    e: com.bumptech.glide.load.engine.GlideException?,
+                    e: GlideException?,
                     model: Any?,
-                    target: com.bumptech.glide.request.target.Target<android.graphics.drawable.Drawable>?,
+                    target: Target<Drawable>,
                     isFirstResource: Boolean
                 ): Boolean {
                     setUiState(UiState.Error("Error: ${e?.message ?: "Unknown error"}"))
@@ -95,10 +91,10 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onResourceReady(
-                    resource: android.graphics.drawable.Drawable?,
-                    model: Any?,
-                    target: com.bumptech.glide.request.target.Target<android.graphics.drawable.Drawable>?,
-                    dataSource: com.bumptech.glide.load.DataSource?,
+                    resource: Drawable,
+                    model: Any,
+                    target: Target<Drawable>,
+                    dataSource: DataSource,
                     isFirstResource: Boolean
                 ): Boolean {
                     setUiState(UiState.Done("Image loaded!"))

@@ -43,7 +43,6 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.mockito.core)
-    testImplementation(libs.mockito.inline)
     testImplementation(libs.mockwebserver)
     testImplementation(libs.robolectric)
     testImplementation(libs.kotlinx.coroutines.test)
