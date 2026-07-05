@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.futurobot.glidedownloadinterceptor"
+    namespace = "ru.futurobot.glidedownloadinterceptor.lib"
     compileSdk = 34
 
     defaultConfig {
@@ -40,7 +40,6 @@ dependencies {
     api(libs.glide.okhttp3.integration)
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlinx.coroutines.core)
-    compileOnly(libs.androidx.lifecycle.common.java8)
 
     testImplementation(libs.junit)
     testImplementation(libs.mockito.core)
