@@ -45,7 +45,7 @@ Add the library to your app's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("ru.futurobot:glide-download-interceptor:2.0.0")
+    implementation("ru.kalyaganov:glide-download-interceptor:2.0.1")
 }
 ```
 

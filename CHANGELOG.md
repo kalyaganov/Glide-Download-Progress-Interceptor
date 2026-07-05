@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.1] — 2026-07-05
+
+### Fixed
+- GPG signatures missing from Maven Central artifacts (signing runs in `afterEvaluate`)
+
 ## [2.0.0] — 2026-07-05
 
 ### Added
