@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Download arrow -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 L54,65 M38,55 L54,71 L70,55"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- Progress bar base -->
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M30,78 L78,78"
+        android:strokeWidth="4"
+        android:strokeColor="#80FFFFFF"
+        android:strokeLineCap="round" />
+</vector>
