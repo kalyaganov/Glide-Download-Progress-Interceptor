@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2.0.0] — Unreleased
+## [2.0.0] — 2026-07-05
 
 ### Added
 - Complete rewrite in Kotlin
@@ -16,8 +16,11 @@ All notable changes to this project will be documented in this file.
 - `CHANGELOG.md` and `LICENSE` files
 - Material 3 UI redesign for the demo app
 - KDoc on all public classes and methods
+- GitHub Actions CI (unit tests, lint, assemble)
+- Maven Central publishing via `com.vanniktech.maven.publish`
 
 ### Changed
+- **Namespace renamed**: `ru.futurobot` → `ru.kalyaganov` (correct domain)
 - **Package renamed**: fixed typo `glidedownloadintercenptor` → `glidedownloadinterceptor`
 - Updated OkHttp from 2.6.0 to 4.12.0
 - Updated Glide from 3.6.1 to 4.16.0
