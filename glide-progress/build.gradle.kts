@@ -57,7 +57,7 @@ dependencies {
 mavenPublishing {
     publishToMavenCentral("CENTRAL_PORTAL")
 
-    coordinates("ru.kalyaganov", "glide-download-interceptor", "2.0.0")
+    coordinates("ru.kalyaganov", "glide-download-interceptor", "2.0.1")
 
     pom {
         name.set("Glide Download Progress Interceptor")
@@ -85,6 +85,9 @@ mavenPublishing {
     }
 }
 
-signing {
-    useGpgCmd()
+afterEvaluate {
+    signing {
+        useGpgCmd()
+        sign(publishing.publications)
+    }
 }
