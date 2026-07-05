@@ -11,7 +11,7 @@ Modernize this 2015-era Android demo into a well-tested, documented, and reusabl
 ### 2.1 Package Name Typo
 | Current | Corrected |
 |---|---|
-| `ru.futurobot.glidedownloadintercenptor` | `ru.futurobot.glidedownloadinterceptor` |
+| `ru.kalyaganov.glidedownloadintercenptor` | `ru.kalyaganov.glidedownloadinterceptor` |
 
 The word "interceptor" is missing the second 'r' in the package name, manifest metadata, and all `import` statements.
 
@@ -90,7 +90,7 @@ androidx-test-runner = "1.6.1"
 
 ### 5.1 Package Structure
 ```
-ru.futurobot.glidedownloadinterceptor/
+ru.kalyaganov.glidedownloadinterceptor/
 ├── ProgressListener.kt           # (was .java) Interface
 ├── ProgressResponseBody.kt       # (was .java) OkHttp ResponseBody wrapper
 └── GlideProgressManager.kt       # (was GlideProgressListener.java) Core manager
@@ -375,21 +375,21 @@ Add Material 3 color scheme via `material-theme-builder` or manual XML.
 glide-progress/
 └── src/
     ├── test/
-    │   └── java/ru/futurobot/glidedownloadinterceptor/
+    │   └── java/ru/kalyaganov/glidedownloadinterceptor/
     │       ├── ProgressResponseBodyTest.kt
     │       ├── ProgressInterceptorTest.kt
     │       └── GlideProgressManagerTest.kt
     └── androidTest/
-        └── java/ru/futurobot/glidedownloadinterceptor/
+        └── java/ru/kalyaganov/glidedownloadinterceptor/
             └── GlideProgressManagerInstrumentedTest.kt
 
 app/
 └── src/
     ├── test/
-    │   └── java/ru/futurobot/glidedownloadinterceptor/
+    │   └── java/ru/kalyaganov/glidedownloadinterceptor/
     │       └── MainActivityViewModelTest.kt
     └── androidTest/
-        └── java/ru/futurobot/glidedownloadinterceptor/
+        └── java/ru/kalyaganov/glidedownloadinterceptor/
             └── MainActivityTest.kt
 ```
 
@@ -486,7 +486,7 @@ Every public class and method must have KDoc:
  *
  * Implementations are notified on every chunk of data read from the network.
  *
- * @sample ru.futurobot.glidedownloadinterceptor.sample.main
+ * @sample ru.kalyaganov.glidedownloadinterceptor.sample.main
  */
 fun interface ProgressListener {
     /**

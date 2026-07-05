@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "ru.futurobot.glidedownloadinterceptor"
+    namespace = "ru.kalyaganov.glidedownloadinterceptor"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "ru.futurobot.glidedownloadinterceptor"
+        applicationId = "ru.kalyaganov.glidedownloadinterceptor"
         minSdk = 21
         targetSdk = 34
         versionCode = 2

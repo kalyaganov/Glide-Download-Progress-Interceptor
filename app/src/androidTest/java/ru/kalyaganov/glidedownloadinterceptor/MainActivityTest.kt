@@ -1,4 +1,4 @@
-package ru.futurobot.glidedownloadinterceptor
+package ru.kalyaganov.glidedownloadinterceptor
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4

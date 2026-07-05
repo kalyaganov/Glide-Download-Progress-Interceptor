@@ -1,4 +1,4 @@
-package ru.futurobot.glidedownloadinterceptor
+package ru.kalyaganov.glidedownloadinterceptor
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -14,8 +14,8 @@ import com.bumptech.glide.request.target.Target
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.futurobot.glidedownloadinterceptor.databinding.ActivityMainBinding
-import ru.futurobot.glidedownloadinterceptor.ext.observeProgress
+import ru.kalyaganov.glidedownloadinterceptor.databinding.ActivityMainBinding
+import ru.kalyaganov.glidedownloadinterceptor.ext.observeProgress
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 

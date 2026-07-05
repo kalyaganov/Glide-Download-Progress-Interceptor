@@ -1,4 +1,4 @@
-package ru.futurobot.glidedownloadinterceptor
+package ru.kalyaganov.glidedownloadinterceptor
 
 /**
  * A functional interface for receiving download progress updates.

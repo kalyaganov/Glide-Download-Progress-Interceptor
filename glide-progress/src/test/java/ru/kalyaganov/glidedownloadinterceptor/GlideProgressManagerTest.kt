@@ -1,4 +1,4 @@
-package ru.futurobot.glidedownloadinterceptor
+package ru.kalyaganov.glidedownloadinterceptor
 
 import org.junit.After
 import org.junit.Assert.assertEquals

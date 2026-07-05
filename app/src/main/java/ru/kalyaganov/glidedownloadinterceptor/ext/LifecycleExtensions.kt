@@ -1,10 +1,10 @@
-package ru.futurobot.glidedownloadinterceptor.ext
+package ru.kalyaganov.glidedownloadinterceptor.ext
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
-import ru.futurobot.glidedownloadinterceptor.GlideProgressManager
-import ru.futurobot.glidedownloadinterceptor.ProgressListener
+import ru.kalyaganov.glidedownloadinterceptor.GlideProgressManager
+import ru.kalyaganov.glidedownloadinterceptor.ProgressListener
 
 /**
  * Registers a [ProgressListener] that is automatically removed when the

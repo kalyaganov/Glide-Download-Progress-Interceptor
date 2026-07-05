@@ -1,4 +1,4 @@
-package ru.futurobot.glidedownloadinterceptor
+package ru.kalyaganov.glidedownloadinterceptor
 
 import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockResponse

@@ -1,4 +1,4 @@
-package ru.futurobot.glidedownloadinterceptor
+package ru.kalyaganov.glidedownloadinterceptor
 
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.ResponseBody

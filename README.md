@@ -45,7 +45,7 @@ Add the library to your app's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("ru.futurobot:glide-download-interceptor:2.0.0")
+    implementation("ru.kalyaganov:glide-download-interceptor:2.0.0")
 }
 ```
 
@@ -126,10 +126,10 @@ val progressClient = GlideProgressManager.createProgressClient(baseClient)
 
 | Class | Description |
 |---|---|
-| [`ProgressListener`](glide-progress/src/main/java/ru/futurobot/glidedownloadinterceptor/ProgressListener.kt) | Functional interface with `onProgress(bytesRead, contentLength, done)` |
-| [`GlideProgressManager`](glide-progress/src/main/java/ru/futurobot/glidedownloadinterceptor/GlideProgressManager.kt) | Main entry point. Manages listeners and creates the progress-tracking OkHttp client |
-| [`ProgressResponseBody`](glide-progress/src/main/java/ru/futurobot/glidedownloadinterceptor/ProgressResponseBody.kt) | OkHttp `ResponseBody` wrapper that counts bytes read |
-| [`ProgressInterceptor`](glide-progress/src/main/java/ru/futurobot/glidedownloadinterceptor/ProgressInterceptor.kt) | OkHttp `Interceptor` that wraps responses for progress tracking |
+| [`ProgressListener`](glide-progress/src/main/java/ru/kalyaganov/glidedownloadinterceptor/ProgressListener.kt) | Functional interface with `onProgress(bytesRead, contentLength, done)` |
+| [`GlideProgressManager`](glide-progress/src/main/java/ru/kalyaganov/glidedownloadinterceptor/GlideProgressManager.kt) | Main entry point. Manages listeners and creates the progress-tracking OkHttp client |
+| [`ProgressResponseBody`](glide-progress/src/main/java/ru/kalyaganov/glidedownloadinterceptor/ProgressResponseBody.kt) | OkHttp `ResponseBody` wrapper that counts bytes read |
+| [`ProgressInterceptor`](glide-progress/src/main/java/ru/kalyaganov/glidedownloadinterceptor/ProgressInterceptor.kt) | OkHttp `Interceptor` that wraps responses for progress tracking |
 
 ## Sample App
 
