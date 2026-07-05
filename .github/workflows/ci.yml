@@ -21,7 +21,14 @@ jobs:
           java-version: "17"
           distribution: "temurin"
 
-      - name: Cache Gradle
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 34
+          build-tools: "34.0.0"
+          packages: "platforms;android-34"
+
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
 
       - name: Run unit tests
@@ -51,7 +58,14 @@ jobs:
           java-version: "17"
           distribution: "temurin"
 
-      - name: Cache Gradle
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 34
+          build-tools: "34.0.0"
+          packages: "platforms;android-34"
+
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
 
       - name: Run lint
@@ -79,7 +93,14 @@ jobs:
           java-version: "17"
           distribution: "temurin"
 
-      - name: Cache Gradle
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 34
+          build-tools: "34.0.0"
+          packages: "platforms;android-34"
+
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
 
       - name: Assemble debug APK
