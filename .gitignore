@@ -3,6 +3,13 @@
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+/.idea/caches
 .DS_Store
 /build
+/**/build
 /captures
+*.apk
+*.aab
+*.jks
+*.keystore
+/local.properties

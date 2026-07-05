@@ -1,3 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GlideDownloadInterceptor</string>
+    <string name="app_name">Glide Download Interceptor</string>
+    <string name="download_only">Download Only</string>
+    <string name="load_into_view">Load Into View</string>
+    <string name="image_preview_description">Image preview</string>
+    <string name="progress_idle">Ready</string>
+    <string name="progress_format">%1$d%% (%2$s / %3$s)</string>
+    <string name="progress_unknown">Downloaded: %1$s</string>
 </resources>
